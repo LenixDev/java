@@ -1,30 +1,11 @@
-import java.util.Scanner;
-
 public class Livre {
   String titre;
   String auteur;
-  int prix;
 
-  public Livre(String titre, String auteur, int prix) {
-    titre = this.titre;
-    auteur = this.auteur;
-    prix = this.prix;
-  }
-
-  public static void Afficher() {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Entre le titre: ");
-    String title = sc.nextString();
-    System.out.println("Entre l'auteur: ");
-    String author = sc.nextString();
-    System.out.println("Entre le prix: ");
-    int price = sc.nextInt();
-
-    Livre object = new Livre(title, author, price);
-    System.out.println(object);
-  }
-
-  public static void main(String[] arg) {
-    Afficher();
+  public static void main(String[] args) {
+    Livre livre = new Livre();
+    livre.titre = "Class";
+    livre.auteur = "Marouane";
+    System.out.println("Le titre est: " + livre.titre + " et l'auteur est: " + livre.auteur);
   }
 }
